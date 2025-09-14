@@ -1,0 +1,77 @@
+/* animations */
+
+/* Reference: https://animista.net/play/basic/slide/slide-right */
+
+@keyframes animateCloud {
+    0% {margin-left: -62.5rem; opacity: 0;}
+    100% {margin-left: 100%; opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes animateCloud2 {
+    0% {margin-left: -11.5rem; opacity: 0;}
+    50% {opacity: 0.3;}
+    100% {margin-left: 100%; opacity: 1;}
+}
+
+@keyframes scale-and-spin {
+    0%, 10% { 
+        transform: scale(0) rotate(0deg);
+    }
+    20% { 
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg); 
+    }
+}
+
+
+@keyframes slowFadeIn {
+    0% { opacity: 0; }
+    30% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(-6rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-2rem);
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(-2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+  

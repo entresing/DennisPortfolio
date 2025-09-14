@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Dennis Deng's Portfolio | Selected Work | The Ratatouille in Concert</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/animation.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/works.css">
+        <link rel="stylesheet" href="css/grid.css">
+
+        <script src="js/header.js" defer></script>
+        <script src="js/iframe.js" defer></script>
+    </head>
+
+    <body>
+        <header role="banner">
+            <div class="heading">
+                <nav class="header-container nav-flex" role="navigation">
+                    <a href="#">
+                        <img src="img/logo_3_white.svg" width="633" height="649" alt="A signature logo with my initial inside a moon that lead the user back to the top.">
+                    </a>
+                    
+                    <div class="cloud-button">
+                        <ul class="button-flex">
+                            <li>
+                                <a class="navs nav-home" href="index.html">
+                                    <span></span><span></span><span></span><span></span>
+                                    HOME
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="navs nav-about" href="about.html">
+                                    <span></span><span></span><span></span><span></span>
+                                    ABOUT
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="home-container selected-work-one">
+
+            <div class="work-grid-container">
+                <div class="work-one-heading">
+                    <h1>Ratatouille in Concert - Redefining the Online Experience:</h1>
+                    <p><span>Overview:</span> As part of a vibrant five-member team for the Vancouver Symphony Orchestra's 'Ratatouille in Concert' initiative, I led the charge in UX research, visual design, and web development. Our collective goal was to revolutionize the ticket purchasing process, making it not only immersive but also intuitively user-friendly. My primary objective extended beyond merely revamping the webpage; it was about simplifying and refining the user journey, ensuring a seamless ticket acquisition experience. This project is a testament to my commitment to elevating user engagement and my proficiency in crafting effective and engaging web solutions.</p>
+
+                </div>
+
+                <div class="project-website">
+                    <a class="button-secondary btn-primary" href="https://github.com/kennyzhang620/iat235_p3_test_stg" target="_blank">GITHUB LINK</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="preview">
+            <div class="showcase">
+                <div class="live-web home-container">
+                    <figure class="work-showcase figure-two">
+                        <iframe 
+                        src="https://www.sfu.ca/siat/student_projects/iat339_2023_fall/wxd/Ratatouille/ticket_section_18.html" 
+                        width="1920" 
+                        height="1080" 
+                        title="Ticket Section for Ratatouille Event">
+                    </iframe>
+                    
+                        <figcaption>Web Portfolio preview - Designed and Developed by Dennis</figcaption>
+                    </figure>           
+                </div>
+
+                <div class="home-container preview-details">
+                    <h2>The redesigned version of the Ratatouille ticket page</h2>
+                    <div class="project-content">
+                        <p>Users can begin by navigating to their preferred seating section. The interactive orchestra background fills the entire screen, creating an immersive experience and providing a clear view of the concert environment. By selecting a section, users will be taken to a detailed page displaying available seats and specific pricing. Clicking on an available seat opens a pop-up where users can choose ticket types, such as adult, senior, child, or student. A cart summary is displayed on the right for easy review before proceeding to payment.</p>
+
+                        <p><span>Feel free to navigate the above preview!</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-container project-detail">
+            <div class="detail-role">
+                <h2>My Role:</h2>
+                <p>UI/UX designer & Web developer</p>
+            </div>
+        
+            <div class="detail-time-spent">
+                <h2>Time Spent:</h2>
+                <p>5 weeks</p>
+            </div>
+        
+            <div class="detail-team">
+                <h2>Team:</h2>
+                <ul>
+                    <li>Rebecca Wong</li>
+                    <li>Kenny Zhang</li>
+                    <li>Stin Dang</li>
+                    <li>Karel Feng</li>
+                    <li>Dennis Deng</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="home-container selected-work-one" id="after-showcase">
+
+            <div class="work-image figure-three">
+                <figure>
+                    <img src="img/original_ticket.webp" width="2490" height="1237" alt="The original Ratatouille web page seat map with seat sections">
+                    <figcaption>The Original Ratatouille seat section page</figcaption>
+                </figure>
+            </div>
+
+            <div class="content-container project-challenge">
+                <h2>SPOTLIGHT EFFECT</h2>
+                <div class="project-content">
+                    <p><span>Design:</span> Upon reviewing the webpage, I noted that while the seat map did have basic animation feedback, it was rather uninspiring. It simply highlighted the seat sections upon hovering, which, although functional, didn't contribute to an immersive user experience. To address this, I implemented a more sophisticated spotlight effect. This feature activates when a user hovers over a seat section, enhancing the highlight with a touch of elegance. This improvement not only makes the interaction more visually pleasing but also subtly elevates the overall feel of the webpage, better reflecting the refined atmosphere of an orchestral concert.</p>
+                    <p><span>Code:</span> The most intricate aspect of this project was animating the spotlight effect triggered by user hover over the seat sections. To achieve this, I utilized Photoshop to create four distinct images of highlighted seat sections. These images were then strategically layered using CSS. With a nuanced application of JavaScript, I successfully animated the opacity of each image, corresponding to the user's hover over specific sections. This approach allowed for a seamless and visually engaging interaction, showcasing my ability to blend creative design with technical execution.</p>
+
+                </div>
+            </div>
+
+            <div class="work-image figure-four">
+                <figure>
+                    <img src="img/ratatouille_ticket_home.png" width="1920" height="1080" alt="The final result after implementing the design with HTML, CSS, and Javascript">
+                    <figcaption>Final result in HTML</figcaption>
+                </figure>
+            </div>
+
+            <div class="content-container project-result">
+                <h2>PARALLAX SCROLLING</h2>
+                <div class="project-content">
+                    <p><span>Design:</span> I crafted a user experience that mimics the depth and ambiance of a real theater setting. As users navigate the site, especially when selecting their seats, the background subtly shifts in the opposite direction of their mouse movement. This not only adds an element of immersion but also stirs emotions and memories akin to being in a theater.  </p>
+
+                    <p><span>Code:</span>  I first established a minimum screen width criterion to ensure the effect was optimal on various devices, prioritizing consistency in visual presentation. The primary focus was on accurately tracking user mouse movements and converting these movements into corresponding shifts in the webpage's background through CSS transformations. This method resulted in a smooth depth effect, making the user's interaction with the seat selection more immersive. </p>
+                </div>
+            </div>    
+
+
+            
+        </section>
+
+        <section class="preview">
+            <div class="showcase">
+                <div class="live-web home-container work-image figure-one">
+                    <figure class="work-showcase">
+                        <img src="img/mobile_seatmap.webp" width="2000" height="1500" alt="The crewpagemockup1">
+                    </figure>  
+
+                    <figure class="work-showcase">
+                        <img src="img/mobile_confirm.webp" width="2000" height="1500" alt="The crewpagemockup2">
+                    </figure>    
+
+                    <figure class="work-showcase">
+                        <img src="img/mobile_purchase.webp" width="2000" height="1500" alt="The crewpagemockup3">
+                    </figure>        
+                </div>
+                
+                <div class="home-container preview-details">
+                    <h2>MOBILE MOCKUP</h2>
+                    <div class="project-content">
+                        <p>In the development of the 'Ratatouille in Concert' webpage for the Vancouver Symphony Orchestra, I encountered and overcame several challenges to improve the user experience, especially in tailoring the site for mobile users. Recognizing the limitations of touchscreens, I shifted my focus from the immersive and interactive desktop elements to a more streamlined mobile experience. This decision was informed by user behavior studies, including one cited by Tinger in 2022, which highlighted that 40% of mobile users abandon websites that take over 3 seconds to load, and 46% are unlikely to revisit sites that they've had trouble accessing.</p>
+    
+                        <P>Considering these insights, I chose not to replicate the desktop version's complex animations and seat selection process for the mobile interface. Instead, I adopted a more direct approach, leading users straight to the seat map page, thereby bypassing the more intricate ticket section page. This strategy was influenced by my analysis of other ticketing platforms like Ticketmaster and Eventbrite.</P>
+    
+                        <p>My mobile design concentrated on three key elements crucial for mobile users: selecting a seat section, direct seat selection, and a simplified list format. By streamlining the process, I aimed to reduce user anxiety and expedite their journey to the final purchase with fewer steps. This approach not only caters to the typical mobile user's preference for quick and straightforward interactions but also addresses common issues like slower internet speeds and smaller screen sizes on mobile devices. By simplifying the navigation and focusing on essential functionalities, I enhanced the overall user experience, making it more intuitive and efficient, particularly for users on the go. This strategic adaptation ensures that the 'Ratatouille in Concert' webpage is not only aesthetically pleasing and functional on desktops but also equally efficient and user-friendly on mobile devices.</p>
+    
+                        <a href="https://www.morphlabs.com/mobile-vs-desktop-13-essential-user-behaviors/">"Mobile vs Desktop: 13 Essential User Behaviors."</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="home-container selected-work-one" id="after-showcase">
+
+            <div class="project-thought">
+                <h2>REFLECTION</h2>
+                <div class="project-content2">
+                    <p>Throughout the development phase of the project, I effectively integrated the knowledge I had acquired to execute tasks with efficiency. A significant portion of the JavaScript code was developed using insights from W3Schools, significantly enhanced by the strategic application of AI tools. As a novice in web development, the use of AI was instrumental not only for debugging but also for providing advanced animation suggestions and bridging gaps in my technical knowledge. It greatly accelerated my workflow and enabled me to realize designs beyond my initial skill level. </p>
+                        
+                    <p>My foray into layout techniques like flex and grid, coupled with manipulating elements via the web inspector, was both enjoyable and skill-enhancing. Despite facing initial complexities and redundancies in the code, the combined effort of our team was crucial for the successful completion of our first web development project. This experience not only honed my technical skills but also highlighted the significant advantages of using AI to overcome limitations and tackle complex development challenges.</p> 
+                        
+                    <p>Additionally, being part of a collaborative team, I learned the value of open communication, shared problem-solving, and mutual support, which were key in navigating through challenges and achieving our project goals. My ability to adapt, integrate feedback, and work cohesively with others was as integral to our success as my technical contributions.</p>
+
+                    <div>
+                        <a class="button-secondary btn-primary" href="https://www.sfu.ca/siat/student_projects/iat339_2023_fall/wxd/Ratatouille/ticket_section_18.html" target="_blank">PROTOTYPE LINK</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="work-selection-container">
+                <div class="work-selection-before">
+                    <a class="button-secondary btn-primary" href="works3.html">&lt; Mosaic: The Beginner Filmmaker's Planning Tool</a>
+                </div>
+
+                <div class="work-selection-next">
+                    <a class="button-secondary btn-primary" href="works2.html">Eunoia 2024 &gt;</a>
+                </div>
+            </div>
+            
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#work-section">Selected Works</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:wxd@sfu.com">wxd@sfu.ca</a></li>
+                        <li><a href="tel:+16047617624">+1(604)-761-7624</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h3>Follow Me</h3>
+                    <div class="follow-me">
+                        <a href="https://github.sfu.ca/wxd?tab=repositories" target="_blank">
+                            <img src="img/github.png" width="638" height="638" alt="A GitHub icon that will lead the user to my GitHub page">
+                        </a>
+                        <a href="https://www.linkedin.com/in/dennis-deng-a18a14203/" target="_blank">
+                            <img src="img/linkdin.png" width="638" height="638" alt="A LinkedIn icon that will lead the user to my Linkdin page">
+                        </a>
+                        <a href="https://twitter.com/NewBlashed" target="_blank">
+                            <img src="img/twitter.png" width="638" height="638" alt="A Twitter icon that will lead the user to my Twitter page">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; [2024] Website Designed and Developed by [Dennis Deng]. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+
+</html>

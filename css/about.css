@@ -1,0 +1,64 @@
+body {
+    color: #010101;
+    background-color: #fafcff;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    /* margin-top: 13rem; */
+    margin-bottom: 7em;
+}
+
+.bio-container h1{
+    margin-top: 19rem;
+    font-size: 5rem;
+    width: 80%;
+}
+
+.project-website{
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.bio-container h2{
+    margin-top: 3rem;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+    /* margin-top: 1rem; */
+    margin-bottom: 5rem;
+    animation: slowFadeIn 3s;
+}
+
+.about-page-button{
+    margin-bottom: 0.25rem;
+}
+
+.star {
+    width: 0.8em; 
+    height: 0.8em; 
+    margin-top: 0.5rem;
+}
+
+.heading {
+    animation: slowFadeIn 3s;
+    /* Set to white by default */
+    background-color: white; 
+    /* Add box-shadow by default */
+    box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: fixed; 
+    width: 100%; 
+    z-index: 10; 
+
+}
+
+/* Only when JavaScript is enabled and user scrolls, revert to transparent */
+.heading.scrolled {
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent; 
+}
