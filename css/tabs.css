@@ -1,0 +1,161 @@
+/* ============================================================
+   Interactive "Design / Development" tabs with a liquid wave
+   divider. The wave morphs horizontally toward the active tab.
+   ============================================================ */
+
+.tab-wave {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  z-index: 3;
+  margin-bottom: -1px; /* avoid a hairline seam against the white panel */
+}
+
+/* The wave SVG stretches to fill the divider width. */
+.wave-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wave-fill {
+  fill: #fafcff; /* matches the white project area */
+}
+
+.wave-stroke {
+  fill: none;
+  /* stroke: #010101; */
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke; /* keeps line weight even when stretched */
+}
+
+/* ---------- Tab labels ---------- */
+.wave-tab {
+  position: absolute;
+  top: 150px;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #010101;
+  background: none;
+  border: none;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  opacity: 0.4;
+  z-index: 4;
+  white-space: nowrap;
+  transition:
+    top 0.65s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.65s ease,
+    font-size 0.65s ease,
+    transform 0.2s ease;
+}
+
+#tab-design {
+  left: 22%;
+}
+#tab-dev {
+  left: 78%;
+}
+
+.wave-tab:hover {
+  opacity: 0.7;
+}
+
+.wave-tab:focus-visible {
+  outline: 0.2rem solid #010101;
+  outline-offset: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+/* Active tab rises up to sit "on" the wave peak. */
+.wave-tab.is-active {
+  top: 100px;
+  opacity: 1;
+  font-size: 3rem;
+}
+
+/* ---------- Project panels ---------- */
+.work-panel {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.work-panel[hidden] {
+  display: none;
+}
+
+/* fading out (leaving) / not yet faded in (entering) */
+.work-panel.is-leaving,
+.work-panel.is-entering {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+/* Placeholder card art for development projects without a screenshot. */
+.placeholder-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(135deg, #79a2d6 0%, #2c3e57 100%);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .tab-wave {
+    height: 130px;
+  }
+
+  .wave-tab {
+    top: 64px;
+    font-size: 1.5rem;
+  }
+
+  .wave-tab.is-active {
+    top: 22px;
+    font-size: 1.8rem;
+  }
+
+  #tab-design {
+    left: 24%;
+  }
+  #tab-dev {
+    left: 76%;
+  }
+}
+
+@media (max-width: 540px) {
+  .tab-wave {
+    height: 110px;
+  }
+
+  .wave-tab {
+    top: 56px;
+    font-size: 1.2rem;
+  }
+
+  .wave-tab.is-active {
+    top: 18px;
+    font-size: 1.45rem;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .wave-tab,
+  .work-panel {
+    transition: opacity 0.2s ease;
+  }
+}
