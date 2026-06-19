@@ -46,7 +46,7 @@
   }
 
   .hero-heading-lines p {
-    margin: 15rem 0 0 0;
+    margin: 15rem 0 1.5rem 0;
     font-size: 1rem;
   }
 
@@ -89,7 +89,7 @@
   }
 
   .preview-details p {
-    color: white;
+    color: #fafcff;
     width: 100%;
   }
 
@@ -129,14 +129,6 @@
     margin-top: 5rem;
     flex-wrap: wrap;
     gap: 0;
-  }
-
-  .star {
-    display: none;
-  }
-
-  .hero-heading-line h1 .star {
-    display: none;
   }
 
   .bio-container {
@@ -254,7 +246,7 @@
   }
 
   .preview-details p {
-    color: white;
+    color: #fafcff;
     width: 100%;
   }
 
@@ -268,7 +260,7 @@
   }
 
   .hero-heading-lines p {
-    margin: 15rem 0 0 0;
+    margin: 15rem 0 1.5rem 0;
     font-size: 1rem;
   }
 
@@ -308,10 +300,6 @@
     margin-top: 1rem;
   }
 
-  .star {
-    display: none;
-  }
-
   .works-heading h2 {
     margin-top: 3rem;
     margin-bottom: 1rem;
@@ -342,7 +330,7 @@
   }
 
   .hero-heading-lines p {
-    margin: 15rem 0 0 0;
+    margin: 15rem 0 1.5rem 0;
     font-size: 1.5rem;
   }
 
@@ -400,7 +388,7 @@
   }
 
   .hero-heading-lines p {
-    margin: 15rem 0 0 0;
+    margin: 15rem 0 1.5rem 0;
     font-size: 1.5rem;
   }
 

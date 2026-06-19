@@ -37,12 +37,13 @@
 .wave-tab {
   position: absolute;
   top: 150px;
-  transform: translate(-50%, -50%);
-  font-family: "Montserrat Alternates", sans-serif;
+  --tab-lift: 0px;
+  transform: translate(-50%, -50%) translateY(var(--tab-lift)) scale(1);
+  font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 2.5rem;
   line-height: 1;
-  color: #010101;
+  color: #1a1a1a;
   background: none;
   border: none;
   padding: 0.25rem 0.5rem;
@@ -51,10 +52,8 @@
   z-index: 4;
   white-space: nowrap;
   transition:
-    top 0.65s cubic-bezier(0.65, 0, 0.35, 1),
     opacity 0.65s ease,
-    font-size 0.65s ease,
-    transform 0.2s ease;
+    transform 0.65s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 #tab-design {
@@ -69,16 +68,16 @@
 }
 
 .wave-tab:focus-visible {
-  outline: 0.2rem solid #010101;
+  outline: 0.2rem solid #1a1a1a;
   outline-offset: 0.3rem;
   border-radius: 0.5rem;
 }
 
 /* Active tab rises up to sit "on" the wave peak. */
 .wave-tab.is-active {
-  top: 100px;
+  --tab-lift: -50px;
   opacity: 1;
-  font-size: 3rem;
+  transform: translate(-50%, -50%) translateY(var(--tab-lift)) scale(1.12);
 }
 
 /* ---------- Project panels ---------- */
@@ -124,8 +123,8 @@
   }
 
   .wave-tab.is-active {
-    top: 22px;
-    font-size: 1.8rem;
+    --tab-lift: -42px;
+    transform: translate(-50%, -50%) translateY(var(--tab-lift)) scale(1.08);
   }
 
   #tab-design {
@@ -147,8 +146,8 @@
   }
 
   .wave-tab.is-active {
-    top: 18px;
-    font-size: 1.45rem;
+    --tab-lift: -36px;
+    transform: translate(-50%, -50%) translateY(var(--tab-lift)) scale(1.08);
   }
 }
 
@@ -157,5 +156,10 @@
   .wave-tab,
   .work-panel {
     transition: opacity 0.2s ease;
+  }
+
+  .wave-tab,
+  .wave-tab.is-active {
+    transform: translate(-50%, -50%) scale(1);
   }
 }

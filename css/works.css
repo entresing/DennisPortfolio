@@ -1,5 +1,5 @@
 body {
-  color: #010101;
+  color: #1a1a1a;
   background-color: #fafcff;
 }
 
@@ -27,21 +27,79 @@ h2 {
 
 .preview {
   margin-bottom: 5rem;
-  animation: slowFadeIn 4s;
+  animation: fadeIn 0.8s ease-out both;
 }
 
 .work-image img {
   width: 100%;
   height: auto;
-  animation: slowFadeIn 4s;
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.work-image video {
+  width: 100%;
+  height: auto;
+  animation: fadeIn 0.8s ease-out both;
+}
+
+/* Expandable development disclosure */
+.dev-disclosure {
+  margin-top: 1rem;
+}
+
+.dev-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dev-icon {
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.dev-disclosure.open .dev-icon {
+  transform: rotate(180deg);
+}
+
+.dev-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+}
+
+.dev-panel-inner {
+  overflow: hidden;
+}
+
+.dev-panel-inner p {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.dev-disclosure.open .dev-panel {
+  grid-template-rows: 1fr;
 }
 
 .work2-image img {
   width: 100%;
   height: auto;
   padding: 1rem;
-  background-color: #000000;
-  animation: slowFadeIn 4s;
+  background-color: #1a1a1a;
+  animation: fadeIn 0.8s ease-out both;
 }
 
 .work-showcase iframe {
@@ -54,7 +112,7 @@ iframe {
 }
 
 .work-showcase figcaption {
-  color: #ffffff;
+  color: #fafcff;
   margin-bottom: 2em;
 }
 
@@ -63,29 +121,29 @@ figcaption {
 }
 
 .preview-details p {
-  color: white;
+  color: #fafcff;
   width: 100%;
 }
 
 .preview-details h2 {
-  color: white;
+  color: #fafcff;
   margin-top: 2rem;
 }
 
 .showcase {
-  background-color: #000000;
+  background-color: #1a1a1a;
   padding-top: 10em;
   padding-bottom: 10em;
 }
 
 .white-image-background {
-  background-color: #000000;
+  background-color: #1a1a1a;
   padding-top: 10em;
   padding-bottom: 10em;
 }
 
 .live-web h2 {
-  color: white;
+  color: #fafcff;
   text-align: center;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -173,8 +231,8 @@ figcaption {
 }
 
 .project-content a:focus {
-  background-color: #010101;
-  color: #ffffff;
+  background-color: #1a1a1a;
+  color: #fafcff;
 }
 
 /* .mobile-image-container img{
@@ -191,9 +249,9 @@ figcaption {
 }
 
 .heading {
-  animation: slowFadeIn 3s;
+  animation: fadeIn 0.8s ease-out both;
   /* Set to white by default */
-  background-color: white;
+  background-color: #fafcff;
   /* Add box-shadow by default */
   box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
   transition:
@@ -245,6 +303,20 @@ figcaption {
 .project-content ul li {
   list-style-type: disc;
   margin-left: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview,
+  .work-image img,
+  .work-image video,
+  .work2-image img,
+  .heading,
+  .dev-icon,
+  .dev-panel,
+  .project-content a::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 .project-responsiveness .project-content2 {

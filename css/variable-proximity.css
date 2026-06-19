@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+
+/* React Bits "VariableProximity" â€?rounded variable font (Nunito) used
+   for the effect; it exposes a `wght` axis (200â€?000). */
+.variable-proximity {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Ensure hero paragraph styles do not override the variable-font effect. */
+.hero-heading-lines .variable-proximity {
+  font-family: "Nunito", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Hero integration: keep the first role inline while
+  "& FRONT END DEVELOPER" remains on the next line. */
+.hero-heading-line h1 .variable-proximity {
+  display: inline-block;
+}
+
+.hero-heading-line h1 .second-role.variable-proximity {
+  display: block;
+}

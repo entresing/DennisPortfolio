@@ -9,7 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
       rel="stylesheet"
     />
 
@@ -19,6 +23,7 @@
     <link rel="stylesheet" href="css/grid.css" />
 
     <script src="js/header.js" defer></script>
+    <script src="js/disclosure.js" defer></script>
   </head>
 
   <body>
@@ -83,14 +88,17 @@
             class="button-secondary btn-primary"
             href="https://github.com/timz815/459-Course-Project"
             target="_blank"
-            >GITHUB LINK</a
-          >
+            rel="noopener noreferrer"
+            >GITHUB LINK
+          </a>
           <a
             class="button-secondary btn-primary"
             href="https://www.figma.com/design/akIhreB6o2Hcm6Lqhuvhvo/IAT459_FinalProject?m=dev"
             target="_blank"
-            >PROTOTYPE LINK</a
+            rel="noopener noreferrer"
           >
+            FIGMA LINK
+          </a>
         </div>
       </div>
     </section>
@@ -240,12 +248,19 @@
     <section class="home-container selected-work-one" id="after-showcase">
       <div class="work-image figure-three">
         <figure>
-          <img
-            src="img/work5/PaperTrader3.png"
+          <video
             width="1500"
             height="1125"
-            alt="The Paper Trader Arena Stock Market page on a laptop, showing a grid of stock cards with prices and percentage changes"
-          />
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="A looping preview of the Paper Trader Arena Stock Market page showing tradable stock cards"
+          >
+            <source src="img/work5/DirectStockClip.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <figcaption>
             Stock Market - browse stocks and trade directly from the detail view
           </figcaption>
@@ -253,7 +268,7 @@
       </div>
 
       <div class="content-container project-challenge">
-        <h2>MAIN FEATURE 01 - DIRECT STOCK MARKET TRADING FLOW</h2>
+        <h2>01 - DIRECT STOCK MARKET TRADING FLOW</h2>
         <div class="project-content">
           <p>
             <span>Design:</span> Users can place trades through two different
@@ -272,27 +287,68 @@
             context visible, and supports faster decision-making for beginner
             users.
           </p>
-
-          <p>
-            <span>Development:</span> Built with React and React Router, the
-            stock detail page (StockDetail.js) fetches each stock through a GET
-            /api/stocks/:symbol request and reads the symbol from the URL using
-            useParams. When a user chooses to trade, a TournamentSelectModal
-            checks their active tournaments and inspects each participant's
-            holdings to decide whether to open a buy or sell flow, then uses
-            useNavigate to route to a dedicated screen while passing a returnTo
-            state so users can return to the same stock context. The buy and
-            sell components validate each trade against the participant's
-            available cash balance or owned shares before submitting a POST
-            /api/tournaments/:id/trades request, and a polling helper watches
-            the trade queue until execution completes before confirming the
-            result and updating the portfolio.
-          </p>
+          <div class="line"></div>
+          <div class="dev-disclosure">
+            <button
+              type="button"
+              class="dev-toggle"
+              aria-expanded="false"
+              aria-controls="dev-panel-1"
+            >
+              <span>Development:</span>
+              <span
+                class="material-symbols-outlined dev-icon"
+                aria-hidden="true"
+                >expand_more</span
+              >
+            </button>
+            <div class="dev-panel" id="dev-panel-1">
+              <div class="dev-panel-inner">
+                <p>
+                  Built with React and React Router, the stock detail page
+                  (StockDetail.js) fetches each stock through a GET
+                  /api/stocks/:symbol request and reads the symbol from the URL
+                  using useParams. When a user chooses to trade, a
+                  TournamentSelectModal checks their active tournaments and
+                  inspects each participant's holdings to decide whether to open
+                  a buy or sell flow, then uses useNavigate to route to a
+                  dedicated screen while passing a returnTo state so users can
+                  return to the same stock context. The buy and sell components
+                  validate each trade against the participant's available cash
+                  balance or owned shares before submitting a POST
+                  /api/tournaments/:id/trades request, and a polling helper
+                  watches the trade queue until execution completes before
+                  confirming the result and updating the portfolio.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="content-container project-result">
-        <h2>MAIN FEATURE 02 - WATCHLIST</h2>
+      <div class="work-image figure-three">
+        <figure>
+          <video
+            width="1500"
+            height="1125"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="A looping preview of the Paper Trader Arena watchlist where users add and remove stocks they want to follow"
+          >
+            <source src="img/work5/WatchlistClip.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>
+            Watchlist - save and manage the stocks you want to follow
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="content-container project-challenge">
+        <h2>02 - WATCHLIST</h2>
         <div class="project-content">
           <p>
             <span>Design:</span> For authenticated users, the Home page includes
@@ -309,30 +365,58 @@
             and feel more connected to their portfolio decisions.
           </p>
 
-          <p>
-            <span>Development:</span> For authenticated users, the Home page
-            loads the watchlist with a GET /api/watchlist call that sends the
-            user's JWT token, storing the returned stocks in React state. From
-            the stock detail page, a handleAddToWatchlist toggle adds or removes
-            a stock through POST /api/watchlist and DELETE
-            /api/watchlist/:symbol, while a watchlistAdded state value swaps the
-            button between "Add to Watchlist" and "Added" so the UI always
-            reflects the current status. The saved stocks are rendered with a
-            reusable card and row layout showing the symbol, sector, price, and
-            a color-coded change percentage, and each entry links back to
-            /stocks/:symbol so users can jump straight into trading.
-          </p>
+          <div class="line"></div>
+          <div class="dev-disclosure">
+            <button
+              type="button"
+              class="dev-toggle"
+              aria-expanded="false"
+              aria-controls="dev-panel-2"
+            >
+              <span>Development:</span>
+              <span
+                class="material-symbols-outlined dev-icon"
+                aria-hidden="true"
+                >expand_more</span
+              >
+            </button>
+            <div class="dev-panel" id="dev-panel-2">
+              <div class="dev-panel-inner">
+                <p>
+                  For authenticated users, the Home page loads the watchlist
+                  with a GET /api/watchlist call that sends the user's JWT
+                  token, storing the returned stocks in React state. From the
+                  stock detail page, a handleAddToWatchlist toggle adds or
+                  removes a stock through POST /api/watchlist and DELETE
+                  /api/watchlist/:symbol, while a watchlistAdded state value
+                  swaps the button between "Add to Watchlist" and "Added" so the
+                  UI always reflects the current status. The saved stocks are
+                  rendered with a reusable card and row layout showing the
+                  symbol, sector, price, and a color-coded change percentage,
+                  and each entry links back to /stocks/:symbol so users can jump
+                  straight into trading.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="work-image figure-four">
         <figure>
-          <img
-            src="img/work5/PaperTrader1.png"
+          <video
             width="1500"
             height="1125"
-            alt="The Paper Trader Arena Tournament Detail page on a laptop, showing the leaderboard, portfolio value, and trading console for 'The Q3 Quant Invitational'"
-          />
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="A looping preview of the Paper Trader Arena Tournament Detail page showing the leaderboard, portfolio value, and trading console"
+          >
+            <source src="img/work5/TournamentDetailClip.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <figcaption>
             Tournament Detail - a bento-style dashboard with the trading console
           </figcaption>
@@ -340,7 +424,7 @@
       </div>
 
       <div class="content-container project-challenge">
-        <h2>MAIN FEATURE 03 - TOURNAMENT DETAIL PAGE</h2>
+        <h2>03 - TOURNAMENT DETAIL PAGE</h2>
         <div class="project-content">
           <p>
             <span>Design:</span> The Tournament Detail page needed to display
@@ -359,24 +443,44 @@
             leaderboard, review their holdings, and make trades without losing
             context.
           </p>
-
-          <p>
-            <span>Development:</span> The tournament detail page
-            (TournamentDetailJoined.js) runs parallel fetches for the
-            tournament, its participants, and stock prices, then composes the
-            screen with a CSS grid that places the leaderboard on the left and
-            the trading console on the right. Portfolio values are computed on
-            render by combining each participant's cash balance with the live
-            value of their holdings, rankings are derived by sorting
-            participants by portfolio value, and holdings are aggregated by
-            symbol before display. The trading console reuses a
-            StockSearchDropdown component, offers preset amount buttons (25-100%
-            of available cash), and routes every buy or sell through the shared
-            TradeConfirmModal and the same trades endpoint, keeping the action
-            area consistent with the rest of the platform. Recharts powers the
-            price visualizations, and the layout relies on flexbox and CSS
-            variables to stay readable across screen sizes.
-          </p>
+          <div class="line"></div>
+          <div class="dev-disclosure">
+            <button
+              type="button"
+              class="dev-toggle"
+              aria-expanded="false"
+              aria-controls="dev-panel-3"
+            >
+              <span>Development:</span>
+              <span
+                class="material-symbols-outlined dev-icon"
+                aria-hidden="true"
+                >expand_more</span
+              >
+            </button>
+            <div class="dev-panel" id="dev-panel-3">
+              <div class="dev-panel-inner">
+                <p>
+                  The tournament detail page (TournamentDetailJoined.js) runs
+                  parallel fetches for the tournament, its participants, and
+                  stock prices, then composes the screen with a CSS grid that
+                  places the leaderboard on the left and the trading console on
+                  the right. Portfolio values are computed on render by
+                  combining each participant's cash balance with the live value
+                  of their holdings, rankings are derived by sorting
+                  participants by portfolio value, and holdings are aggregated
+                  by symbol before display. The trading console reuses a
+                  StockSearchDropdown component, offers preset amount buttons
+                  (25-100% of available cash), and routes every buy or sell
+                  through the shared TradeConfirmModal and the same trades
+                  endpoint, keeping the action area consistent with the rest of
+                  the platform. Recharts powers the price visualizations, and
+                  the layout relies on flexbox and CSS variables to stay
+                  readable across screen sizes.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -453,7 +557,42 @@
           </p>
         </div>
       </div>
+    </section>
 
+    <section class="preview">
+      <div class="showcase">
+        <div class="live-web home-container work-image figure-one">
+          <figure class="work-showcase">
+            <img
+              src="img/work5/PaperTrader3.png"
+              width="1500"
+              height="1125"
+              alt="The Paper Trader Arena Stock Market page on a laptop, showing stock cards with prices and percentage changes"
+            />
+          </figure>
+
+          <figure class="work-showcase">
+            <img
+              src="img/work5/PaperTrader0.png"
+              width="1500"
+              height="1125"
+              alt="The Paper Trader Arena watchlist interface showing saved stocks and market changes"
+            />
+          </figure>
+
+          <figure class="work-showcase">
+            <img
+              src="img/work5/PaperTrader1.png"
+              width="1500"
+              height="1125"
+              alt="The Paper Trader Arena Tournament Detail page showing rankings, portfolio value, and trading controls"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-container selected-work-one">
       <div class="project-thought">
         <h2>FINAL REFLECTION</h2>
         <div class="project-content2">
@@ -482,9 +621,10 @@
 
           <div>
             <a
-              class="button-secondary btn-primary"
+              class="button-secondary"
               href="https://github.com/timz815/459-Course-Project"
               target="_blank"
+              rel="noopener noreferrer"
               >GITHUB LINK</a
             >
           </div>
@@ -495,7 +635,7 @@
         <div class="work-selection-before"></div>
 
         <div class="work-selection-next">
-          <a class="button-secondary btn-primary" href="works3.html"
+          <a class="button-secondary" href="works3.html"
             >Mosaic: The Beginner Filmmaker's Planning Tool &gt;</a
           >
         </div>
@@ -525,6 +665,7 @@
             <a
               href="https://github.sfu.ca/wxd?tab=repositories"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="img/github.png"
@@ -536,6 +677,7 @@
             <a
               href="https://www.linkedin.com/in/dennis-deng-a18a14203/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="img/linkdin.png"
@@ -544,7 +686,11 @@
                 alt="A LinkedIn icon that will lead the user to my Linkdin page"
               />
             </a>
-            <a href="https://twitter.com/NewBlashed" target="_blank">
+            <a
+              href="https://twitter.com/NewBlashed"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="img/twitter.png"
                 width="638"

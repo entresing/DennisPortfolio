@@ -27,7 +27,7 @@ h3 {
 
 .btn-primary {
   background-color: #007bff;
-  color: white;
+  color: #fafcff;
   padding: 8px 20px;
   border: none;
   border-radius: 5px;
@@ -36,7 +36,7 @@ h3 {
 
 .btn-secondary {
   background-color: #28a745;
-  color: white;
+  color: #fafcff;
   padding: 8px 20px;
   border: none;
   border-radius: 5px;
@@ -61,7 +61,7 @@ form input {
 button[type="submit"] {
   padding: 8px 20px;
   background-color: #007bff;
-  color: white;
+  color: #fafcff;
   border: none;
   border-radius: 5px;
   cursor: pointer;

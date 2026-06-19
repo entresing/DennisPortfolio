@@ -11,13 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:wght@200..1000&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/variable-proximity.css" />
   </head>
 
   <body>
@@ -75,16 +76,86 @@
       <div class="x7">
         <div class="cloud"></div>
       </div>
+
+      <div class="x8">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x9">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x10">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x11">
+        <div class="cloud"></div>
+      </div>
     </div>
 
     <section class="home-container name-and-role">
       <div class="grid-hero">
         <div class="hero-heading-lines">
-          <p>HEYO! I'M <span>DENNIS</span>, YOUR <span>FRIENDLY</span></p>
+          <p class="variable-proximity">
+            <span
+              data-vp
+              data-from="'wght' 300"
+              data-to="'wght' 1000"
+              data-radius="120"
+              data-falloff="linear"
+              data-container=".hero-heading-lines"
+              >Heyo! I'm</span
+            >
+            <span
+              data-vp
+              data-from="'wght' 1000"
+              data-to="'wght' 300"
+              data-radius="120"
+              data-falloff="linear"
+              data-container=".hero-heading-lines"
+              >Dennis,</span
+            >
+            <span
+              data-vp
+              data-from="'wght' 300"
+              data-to="'wght' 1000"
+              data-radius="120"
+              data-falloff="linear"
+              data-container=".hero-heading-lines"
+              >Your </span
+            >
+            <span
+              data-vp
+              data-from="'wght' 1000"
+              data-to="'wght' 300"
+              data-radius="120"
+              data-falloff="linear"
+              data-container=".hero-heading-lines"
+              >Friendly</span
+          </p>
           <div class="hero-heading-line">
             <h1>
-              UX/UI DESIGNER <span class="star"></span>
-              <span class="second-role">& FRONT END DEVELOPER</span>
+              <span
+                class="variable-proximity"
+                data-vp
+                data-from="'wght' 900"
+                data-to="'wght' 300"
+                data-radius="120"
+                data-falloff="linear"
+                data-container=".hero-heading-line"
+                >UX/UI Designer</span
+              >
+              <span
+                class="second-role variable-proximity"
+                data-vp
+                data-from="'wght' 900"
+                data-to="'wght' 300"
+                data-radius="120"
+                data-falloff="linear"
+                data-container=".hero-heading-line"
+                >& Front-End Developer</span
+              >
             </h1>
           </div>
         </div>
@@ -266,5 +337,7 @@
         </div>
       </footer>
     </section>
+
+    <script src="js/variable-proximity.js" defer></script>
   </body>
 </html>
