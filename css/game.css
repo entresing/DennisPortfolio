@@ -1,0 +1,52 @@
+/* ===================================================================
+   Game Portfolio theme
+   Scoped to <body class="game-theme"> so it never affects the
+   UX/UI homepage. Keeps existing layout, typography and interaction
+   animations; only swaps the palette and the cloud look.
+   =================================================================== */
+
+.game-theme {
+  background-color: #8179d6;
+}
+
+/* -------------------------------------------------------------------
+   Pixelated cloud effect
+   Replaces the smooth, rounded clouds with blocky 8-bit style clouds
+   and choppy, stepped motion instead of the smooth linear drift.
+   ------------------------------------------------------------------- */
+.game-theme .cloud {
+  --pixel: 2.5em;
+  width: var(--pixel);
+  height: var(--pixel);
+  background: #fafcff;
+  border-radius: 0;
+  box-shadow:
+    /* bottom row (4 blocks wide) */
+    calc(var(--pixel) * -1) 0 0 #fafcff,
+    var(--pixel) 0 0 #fafcff,
+    calc(var(--pixel) * 2) 0 0 #fafcff,
+    /* second row */ calc(var(--pixel) * -1) calc(var(--pixel) * -1) 0 #fafcff,
+    0 calc(var(--pixel) * -1) 0 #fafcff,
+    var(--pixel) calc(var(--pixel) * -1) 0 #fafcff,
+    calc(var(--pixel) * 2) calc(var(--pixel) * -1) 0 #fafcff,
+    /* top row (2 blocks, centered) */ 0 calc(var(--pixel) * -2) 0 #fafcff,
+    var(--pixel) calc(var(--pixel) * -2) 0 #fafcff;
+  image-rendering: pixelated;
+}
+
+/* Hide the rounded pseudo-element bumps used by the smooth clouds */
+.game-theme .cloud:after,
+.game-theme .cloud:before {
+  content: none;
+  display: none;
+}
+
+/* Make the drift motion choppy/stepped for a retro, pixelated feel */
+.game-theme #background-wrap [class^="x"] {
+  animation-timing-function: steps(40, end) !important;
+}
+
+/* -------------------------------------------------------------------
+   Portfolio switch button (game side)
+   Icon sizing/alignment is handled in main.css so both homepages match.
+   ------------------------------------------------------------------- */
