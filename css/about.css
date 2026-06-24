@@ -16,6 +16,7 @@ body {
   margin-bottom: 3rem;
   font-size: 5rem;
   width: 80%;
+  animation: slide-bottom 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .project-website {

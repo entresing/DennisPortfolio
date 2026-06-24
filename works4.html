@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/works.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/variable-proximity.css" />
 
     <script src="js/header.js" defer></script>
     <script src="js/iframe.js" defer></script>
@@ -56,7 +57,28 @@
     <section class="home-container selected-work-one">
       <div class="work-grid-container">
         <div class="work-one-heading project-content">
-          <h1>Handmade Costume: Sakai - Ghost of Tsushima Armor</h1>
+          <h1>
+            <span
+              class="variable-proximity vp-lock-line project-title"
+              data-vp
+              data-from="'wght' 850"
+              data-to="'wght' 1000"
+              data-radius="150"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >Ghost of Tsushima Armor</span
+            >
+            <span
+              class="variable-proximity vp-lock-line context"
+              data-vp
+              data-from="'wght' 350"
+              data-to="'wght' 550"
+              data-radius="90"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >Handmade Costume Case Study</span
+            >
+          </h1>
           <p>
             <span>Overview:</span> Project Sakai, is inspired by the hero of
             <a href="https://en.wikipedia.org/wiki/Ghost_of_Tsushima"
@@ -394,5 +416,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/variable-proximity.js" defer></script>
   </body>
 </html>

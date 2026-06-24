@@ -3,17 +3,61 @@ body {
   background-color: #fafcff;
 }
 
+/* Game case-study pages reuse this works layout but only the H1 should
+   adopt the game theme (Pixelify Sans). Keep the light, readable reading
+   background here so the long-form case study stays consistent with the
+   rest of the portfolio. Scoped to works pages only (game.html does not
+   load works.css, so its purple sky is unaffected). */
+body.game-theme {
+  background-color: #fafcff;
+}
+
 h2 {
   margin-bottom: 0.75rem;
 }
 
 .work-one-heading h1 {
+  /* Keep heading lines in a readable range on large screens. */
+  --work-title-line-max: 34ch;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+  max-inline-size: var(--work-title-line-max);
+  animation: slide-bottom 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.work-one-heading h1 .vp-lock-line {
+  display: block;
+  max-inline-size: var(--work-title-line-max);
+  white-space: nowrap;
+}
+
+.work-one-heading h1 .context {
+  letter-spacing: 0.01em;
+}
+
+.work-one-heading h1 .project-title {
+  letter-spacing: 0;
 }
 
 .work-one-heading {
   max-width: 46rem;
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .work-one-heading h1 {
+    --work-title-line-max: 30ch;
+  }
+}
+
+@media only screen and (max-width: 37.5rem) {
+  .work-one-heading h1 {
+    --work-title-line-max: 100%;
+  }
+
+  .work-one-heading h1 .vp-lock-line {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
 }
 
 .work-one-heading p {
@@ -273,31 +317,24 @@ figcaption {
 }
 
 .project-detail {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem 3rem;
 }
 
 .project-detail h3 {
   margin-bottom: 1rem;
 }
 
-.detail-role {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-.detail-time-spent {
-  grid-area: 1 / 3 / 2 / 4;
-}
-
-.detail-team {
-  grid-area: 1 / 5 / 2 / 6;
-}
-
-.detail-mentor {
-  grid-area: 1 / 6 / 2 / 6;
+.detail-role,
+.detail-time-spent,
+.detail-team,
+.detail-mentor,
+.detail-tools {
+  flex: 1 1 0;
+  min-width: 12ch;
 }
 
 .project-content ul li {

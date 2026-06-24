@@ -9,6 +9,20 @@
   background-color: #8179d6;
 }
 
+.game-theme h1,
+.game-theme h1 .variable-proximity {
+  /* Pixelated variable font (wght 400-700) that responds to the
+     variable-proximity weight animation. Scoped to the game portfolio
+     h1 only so the UX/UI pages keep their original typeface. The
+     per-letter .variable-proximity spans set their own font-family, so
+     they must be targeted directly to override the default Nunito. */
+  font-family: "Pixelify Sans", "Nunito", sans-serif;
+}
+
+.game-theme h1 {
+  animation: slide-bottom 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 /* -------------------------------------------------------------------
    Pixelated cloud effect
    Replaces the smooth, rounded clouds with blocky 8-bit style clouds

@@ -18,15 +18,20 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/variable-proximity.css" />
     <link rel="stylesheet" href="css/game.css" />
+    <script src="js/home-tabs.js" defer></script>
   </head>
 
-  <body class="game-theme">
+  <body class="game-theme" data-portfolio="game">
     <header role="banner">
       <div class="heading">
         <nav class="header-container nav-flex" role="navigation">
@@ -173,7 +178,28 @@
         </div>
 
         <div class="home-container grid two-columns works-selections">
-          <div class="cloud-effect work-one">
+          <div class="cloud-effect work-one" data-portfolio-type="game">
+            <ul>
+              <li>
+                <a href="works-gemini.html">
+                  <span></span><span></span><span></span><span></span>
+                  <div class="image-wrapper wrapper-three">
+                    <img
+                      src="img/gemini/hero_img.png"
+                      width="1500"
+                      height="1125"
+                      alt="Gemini, a hybrid 2D pixel-art and 3D low-poly Unity game environment"
+                    />
+                    <h3 class="image-title">
+                      Gemini - Technical Art &amp; Gameplay Development
+                    </h3>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cloud-effect work-one" data-portfolio-type="ux">
             <ul>
               <li>
                 <a href="works5.html">
@@ -194,7 +220,7 @@
             </ul>
           </div>
 
-          <div class="cloud-effect work-two">
+          <div class="cloud-effect work-two" data-portfolio-type="ux">
             <ul>
               <li>
                 <a href="works3.html">
@@ -215,7 +241,7 @@
             </ul>
           </div>
 
-          <div class="cloud-effect work-three">
+          <div class="cloud-effect work-three" data-portfolio-type="ux">
             <ul>
               <li>
                 <a href="works.html">
@@ -236,7 +262,7 @@
             </ul>
           </div>
 
-          <div class="cloud-effect work-four">
+          <div class="cloud-effect work-four" data-portfolio-type="ux">
             <ul>
               <li>
                 <a href="works2.html">
@@ -257,7 +283,7 @@
             </ul>
           </div>
 
-          <div class="cloud-effect work-one">
+          <div class="cloud-effect work-one" data-portfolio-type="ux">
             <ul>
               <li>
                 <a href="works4.html">
@@ -345,6 +371,7 @@
       </footer>
     </section>
 
+    <script src="js/home-tabs.js" defer></script>
     <script src="js/variable-proximity.js" defer></script>
   </body>
 </html>

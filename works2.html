@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/works.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/variable-proximity.css" />
 
     <script src="js/header.js" defer></script>
     <script src="js/iframe.js" defer></script>
@@ -56,7 +57,38 @@
     <section class="home-container selected-work-one">
       <div class="work-grid-container">
         <div class="work-one-heading">
-          <h1>Eunoia 2024 UX Design Jam - "UX Was Here"</h1>
+          <h1>
+            <span
+              class="variable-proximity vp-lock-line project-title"
+              data-vp
+              data-from="'wght' 850"
+              data-to="'wght' 1000"
+              data-radius="150"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >UX Was Here</span
+            >
+            <span
+              class="variable-proximity vp-lock-line context"
+              data-vp
+              data-from="'wght' 350"
+              data-to="'wght' 550"
+              data-radius="90"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >Eunoia 2024 UX</span
+            >
+            <span
+              class="variable-proximity vp-lock-line context"
+              data-vp
+              data-from="'wght' 350"
+              data-to="'wght' 550"
+              data-radius="90"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >Design Jam</span
+            >
+          </h1>
           <p>
             <span>Overview:</span> I had the incredible opportunity to
             participate in the Eunoia 2024 UX Design Jam alongside three
@@ -515,5 +547,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/variable-proximity.js" defer></script>
   </body>
 </html>

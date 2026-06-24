@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/works.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/variable-proximity.css" />
 
     <script src="js/header.js" defer></script>
     <script src="js/disclosure.js" defer></script>
@@ -58,7 +59,38 @@
     <section class="home-container selected-work-one">
       <div class="work-grid-container">
         <div class="work-one-heading">
-          <h1>Paper Trader Arena - The Trading Simulator</h1>
+          <h1>
+            <span
+              class="variable-proximity vp-lock-line project-title"
+              data-vp
+              data-from="'wght' 850"
+              data-to="'wght' 1000"
+              data-radius="150"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >Paper Trader Arena</span
+            >
+            <span
+              class="variable-proximity vp-lock-line context"
+              data-vp
+              data-from="'wght' 350"
+              data-to="'wght' 550"
+              data-radius="90"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >A Trading Simulator for</span
+            >
+            <span
+              class="variable-proximity vp-lock-line context"
+              data-vp
+              data-from="'wght' 350"
+              data-to="'wght' 550"
+              data-radius="90"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >Learning Market Decisions</span
+            >
+          </h1>
           <p>
             <span>Overview:</span> Paper Trader Arena is an interactive trading
             simulation platform designed to help users practice stock trading in
@@ -163,9 +195,9 @@
       <div class="detail-team">
         <h2>Team:</h2>
         <ul>
-          <li>Dennis Deng - UI Designer & Front-End Developer</li>
-          <li>Timothy Zhang - Backend Developer</li>
-          <li>Lanre Alegbeleye - Project Manager</li>
+          <li>Dennis Deng</li>
+          <li>Timothy Zhang</li>
+          <li>Lanre Alegbeleye</li>
         </ul>
       </div>
     </section>
@@ -706,5 +738,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/variable-proximity.js" defer></script>
   </body>
 </html>
