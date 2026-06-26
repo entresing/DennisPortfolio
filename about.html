@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/variable-proximity.css" />
 
     <script src="js/header.js" defer></script>
   </head>
@@ -25,15 +26,6 @@
     <header role="banner">
       <div class="heading">
         <nav class="header-container nav-flex" role="navigation">
-          <a href="#">
-            <img
-              src="img/logo_3_white.svg"
-              width="633"
-              height="649"
-              alt="A signature logo with my initial inside a moon that lead the user back to the top."
-            />
-          </a>
-
           <div class="cloud-button">
             <ul>
               <li>
@@ -60,7 +52,18 @@
 
       <div class="bio-container">
         <article>
-          <h1>Dennis Deng</h1>
+          <h1>
+            <span
+              class="variable-proximity"
+              data-vp
+              data-from="'wght' 900"
+              data-to="'wght' 300"
+              data-radius="120"
+              data-falloff="linear"
+              data-container=".bio-container"
+              >Dennis Deng</span
+            >
+          </h1>
           <!-- <h2>ABOUT ME:</h2> -->
           <p>
             Hi, I’m Dennis, a recent SFU Interactive Arts and Technology
@@ -175,5 +178,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/variable-proximity.js" defer></script>
   </body>
 </html>

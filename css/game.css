@@ -1,0 +1,179 @@
+/* ===================================================================
+   Game Portfolio theme
+   Scoped to <body class="game-theme"> so it never affects the
+   UX/UI homepage. Keeps existing layout, typography and interaction
+   animations; only swaps the palette and the cloud look.
+   =================================================================== */
+
+.game-theme {
+  background-color: #8179d6;
+}
+
+/* Game About page: use the normal site background color only */
+.game-about-theme {
+  background-color: #fafcff;
+}
+
+.game-theme h1,
+.game-theme h1 .variable-proximity {
+  /* Pixelated variable font (wght 400-700) that responds to the
+     variable-proximity weight animation. Scoped to the game portfolio
+     h1 only so the UX/UI pages keep their original typeface. The
+     per-letter .variable-proximity spans set their own font-family, so
+     they must be targeted directly to override the default Nunito. */
+  font-family: "Pixelify Sans", "Nunito", sans-serif;
+}
+
+.game-theme h1 {
+  animation: slide-bottom 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Match all game-portfolio h2 headings to the h1 pixelated typeface. */
+.game-theme h2 {
+  font-family: "Pixelify Sans", "Nunito", sans-serif;
+}
+
+/* Match all game-portfolio h3 headings to the h1 pixelated typeface. */
+.game-theme h3 {
+  font-family: "Pixelify Sans", "Nunito", sans-serif;
+}
+
+/* -------------------------------------------------------------------
+   Pixelated cloud effect
+   Replaces the smooth, rounded clouds with blocky 8-bit style clouds
+   and choppy, stepped motion instead of the smooth linear drift.
+   ------------------------------------------------------------------- */
+.game-theme .cloud {
+  --pixel: 2.5em;
+  width: var(--pixel);
+  height: var(--pixel);
+  background: #fafcff;
+  border-radius: 0;
+  box-shadow:
+    /* bottom row (4 blocks wide) */
+    calc(var(--pixel) * -1) 0 0 #fafcff,
+    var(--pixel) 0 0 #fafcff,
+    calc(var(--pixel) * 2) 0 0 #fafcff,
+    /* second row */ calc(var(--pixel) * -1) calc(var(--pixel) * -1) 0 #fafcff,
+    0 calc(var(--pixel) * -1) 0 #fafcff,
+    var(--pixel) calc(var(--pixel) * -1) 0 #fafcff,
+    calc(var(--pixel) * 2) calc(var(--pixel) * -1) 0 #fafcff,
+    /* top row (2 blocks, centered) */ 0 calc(var(--pixel) * -2) 0 #fafcff,
+    var(--pixel) calc(var(--pixel) * -2) 0 #fafcff;
+  image-rendering: pixelated;
+}
+
+/* Hide the rounded pseudo-element bumps used by the smooth clouds */
+.game-theme .cloud:after,
+.game-theme .cloud:before {
+  content: none;
+  display: none;
+}
+
+/* Make the drift motion choppy/stepped for a retro, pixelated feel */
+.game-theme #background-wrap [class^="x"] {
+  animation-timing-function: steps(40, end) !important;
+}
+
+/* -------------------------------------------------------------------
+   Pixelated project-card hover (Projects / work-section)
+   Swaps the soft round "cloud" blobs that rise on hover for blocky
+   pixel squares in the game theme colour (#8179d6) with choppy,
+   stepped motion. Scoped to the game portfolio only.
+   ------------------------------------------------------------------- */
+.game-theme .cloud-effect ul li {
+  /* Game theme colour for the rising hover fill */
+  --c: #8179d6;
+}
+
+.game-theme .cloud-effect ul li span {
+  /* Square blocks instead of round blobs for a pixel-art look */
+  border-radius: 0;
+  image-rendering: pixelated;
+  /* Choppy, stepped rise instead of the smooth slide */
+  transition: transform 0.5s steps(6, end);
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+}
+
+/* -------------------------------------------------------------------
+   Portfolio switch button (game side)
+   Icon sizing/alignment is handled in main.css so both homepages match.
+   ------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------
+   Playable build link (Gemini preview)
+   Darkened poster with a centered button-secondary; the whole image
+   links to the WebGL build. Unity Play blocks cross-origin iframing,
+   so this opens in a new tab.
+   ------------------------------------------------------------------- */
+.game-theme .build-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.game-theme .build-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* 50% darker so the centered button stays readable */
+  filter: brightness(0.5);
+  transition:
+    transform 0.4s ease,
+    filter 0.3s ease;
+}
+
+/* Zoom-in on hover/focus */
+.game-theme .build-link:hover img,
+.game-theme .build-link:focus-visible img {
+  transform: scale(1.05);
+  filter: brightness(0.4);
+}
+
+/* Center the button over the image */
+.game-theme .build-link .build-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Light text/outline so it reads on the dark image */
+  color: #fafcff;
+}
+
+.game-theme .build-link .build-play-button::after {
+  border-color: rgba(250, 252, 255, 0.55);
+}
+
+.game-theme .build-link .build-play-button::before {
+  border-color: #fafcff;
+}
+
+.game-theme .build-link:hover .build-play-button,
+.game-theme .build-link:focus-visible .build-play-button {
+  color: #fafcff;
+  transform: translate(-50%, -50%);
+}
+
+.game-theme .build-link:hover .build-play-button::before,
+.game-theme .build-link:focus-visible .build-play-button::before {
+  opacity: 1;
+}
+
+/* Keyboard focus ring on the link itself */
+.game-theme .build-link:focus-visible {
+  outline: 0.1875rem solid #fafcff;
+  outline-offset: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-theme .build-link img {
+    transition: filter 0.3s ease;
+  }
+
+  .game-theme .build-link:hover img,
+  .game-theme .build-link:focus-visible img {
+    transform: none;
+  }
+}
