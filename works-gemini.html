@@ -43,14 +43,14 @@
           <div class="cloud-button">
             <ul class="button-flex">
               <li>
-                <a class="navs nav-home" href="index.html">
+                <a class="navs nav-home" href="game.html">
                   <span></span><span></span><span></span><span></span>
                   HOME
                 </a>
               </li>
 
               <li>
-                <a class="navs nav-about" href="about.html">
+                <a class="navs nav-about" href="about-game.html">
                   <span></span><span></span><span></span><span></span>
                   ABOUT
                 </a>
@@ -360,7 +360,7 @@
       <div class="work-image figure-three">
         <figure>
           <img
-            src="img/gemini/hero_img.png"
+            src="img/gemini/gemini-hybrid-asset-pipeline.png"
             width="1500"
             height="1125"
             alt="A breakdown diagram of Gemini's visual pipeline showing AI-assisted exploration, pixel refinement in Aseprite, 3D asset generation, Unity setup, and ProPixelizer rendering"
@@ -419,7 +419,7 @@
             preload="metadata"
             aria-label="A looping preview of Gemini's shader and VFX work showing the pixelated screen-space rendering and stylized effects"
           >
-            <source src="img/gemini/Preview.mp4" type="video/mp4" />
+            <source src="img/gemini/gemini-shader.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <figcaption>
@@ -473,7 +473,7 @@
             preload="metadata"
             aria-label="A looping preview of Gemini's tether mechanic showing connection, distance, and state feedback between characters"
           >
-            <source src="img/gemini/Preview.mp4" type="video/mp4" />
+            <source src="img/gemini/gemini-tether.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <figcaption>
@@ -488,27 +488,27 @@
         <h2>03 - TETHER MECHANIC AND GAMEPLAY FEEDBACK</h2>
         <div class="project-content">
           <p>
-            The tether mechanic was one of the key gameplay systems I worked on.
-            It needed to function as a mechanic, but it also needed clear visual
-            feedback so players could understand distance, connection, and state
-            changes during gameplay.
+            The tether mechanic was one of Gemini’s key gameplay systems, and my
+            contribution focused on making it visually readable in-game. Beyond
+            functioning as a mechanic, the tether needed clear feedback so
+            players could understand distance, connection, and state changes
+            during gameplay.
           </p>
 
           <p>
-            I implemented the tether behavior in Unity and connected it with
-            visual feedback so the mechanic felt readable instead of purely
-            mechanical. This included thinking about how the tether should
-            appear on screen, how it should respond to player movement, and how
-            it should communicate the relationship between characters or
-            gameplay objects.
+            I implemented the tether visual effect in Unity and designed how the
+            connection appeared on screen, how it responded to player movement,
+            and how it communicated the relationship between linked characters
+            or gameplay objects. My goal was to make the mechanic feel
+            expressive and understandable rather than purely mechanical.
           </p>
 
           <p>
-            This system reflects my strength as both a technical artist and
-            gameplay developer. I was not only writing logic, and I was not only
-            making visuals. I was connecting gameplay behavior with visual
-            communication so the player could understand the mechanic through
-            what they saw and felt in the game.
+            This work reflects how I approach technical art: not just adding
+            visuals after a system is built, but using visual feedback to
+            support gameplay clarity. By connecting motion, timing, and effects
+            with gameplay behavior, I helped players understand the tether
+            through what they saw and felt during play.
           </p>
         </div>
       </div>
@@ -525,7 +525,10 @@
             preload="metadata"
             aria-label="A looping preview of Gemini's enemy detection and chase feedback showing how enemy states are communicated to the player"
           >
-            <source src="img/gemini/Preview.mp4" type="video/mp4" />
+            <source
+              src="img/gemini/gemini-enemy-detection.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
           <figcaption>
@@ -575,7 +578,10 @@
             preload="metadata"
             aria-label="A looping preview of Gemini's pixelated interaction prompts, animation implementation, and memory progression moments"
           >
-            <source src="img/gemini/Preview.mp4" type="video/mp4" />
+            <source
+              src="img/gemini/gemini-interaction-progression.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
           <figcaption>
@@ -616,6 +622,32 @@
             experience rather than only a prototype.
           </p>
         </div>
+      </div>
+
+      <div class="work-image figure-three">
+        <figure>
+          <video
+            width="1500"
+            height="1125"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="A looping preview of Gemini's camera behavior and scene readability systems"
+          >
+            <source
+              src="img/gemini/gemini-camera-readability.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>
+            Camera angle handling and occlusion support improved scene
+            readability, helping players navigate the 3D environment without
+            losing important gameplay information behind foreground objects.
+          </figcaption>
+        </figure>
       </div>
 
       <div class="content-container project-challenge">
@@ -731,30 +763,29 @@
       <div class="showcase">
         <div class="live-web home-container work-image figure-one">
           <figure class="work-showcase">
-            <img
-              src="img/gemini/hero_img.png"
-              width="1500"
-              height="1125"
-              alt="A still of Gemini's final in-game environment showing the hybrid pixel-art and low-poly 3D world rendered through ProPixelizer"
-            />
-          </figure>
-
-          <figure class="work-showcase">
-            <img
-              src="img/gemini/hero_img.png"
-              width="1500"
-              height="1125"
-              alt="A still of Gemini's pixel-art characters and effects inside the 3D Unity environment"
-            />
-          </figure>
-
-          <figure class="work-showcase">
-            <img
-              src="img/gemini/hero_img.png"
-              width="1500"
-              height="1125"
-              alt="A still of Gemini's pixelated interaction prompts and memory collection moments"
-            />
+            <a
+              class="build-link"
+              href="https://play.unity.com/en/games/6a60a124-a081-439f-a37d-63fce1b940a0/gemini"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Play the Gemini WebGL build on Unity Play (opens in a new tab)"
+            >
+              <img
+                src="img/gemini/gemini-mainscreen.png"
+                width="1500"
+                height="1125"
+                alt="A still of Gemini's final in-game environment showing the hybrid pixel-art and low-poly 3D world rendered through ProPixelizer"
+              />
+              <span
+                class="button-secondary build-play-button"
+                aria-hidden="true"
+                >PLAY THE WEBGL BUILD</span
+              >
+            </a>
+            <figcaption>
+              Play the Gemini WebGL build directly in your browser on Unity
+              Play.
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -813,7 +844,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#work-section">Selected Works</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about-game.html">About</a></li>
           </ul>
         </div>
         <div class="footer-section contact">
