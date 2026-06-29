@@ -175,7 +175,8 @@
   }
 
   .work-showcase iframe {
-    height: 50rem;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
   figcation {
     margin-top: 2em;
@@ -365,7 +366,8 @@
   }
 
   .work-showcase iframe {
-    height: 60rem;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 }
 
@@ -396,7 +398,8 @@
   }
 
   .work-showcase iframe {
-    height: 50rem;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 
   .content-container p {
