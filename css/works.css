@@ -265,7 +265,7 @@ figcaption {
 }
 
 /* Chatgpt prompt: how to animate the bottom anchor line from left to right in css? */
-.project-content a::after {
+.project-content a:not(.button-secondary)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -278,11 +278,11 @@ figcaption {
   transition: transform 0.3s ease-in-out;
 }
 
-.project-content a:hover::after {
+.project-content a:not(.button-secondary):hover::after {
   transform: scaleX(1);
 }
 
-.project-content a:focus {
+.project-content a:not(.button-secondary):focus {
   background-color: #1a1a1a;
   color: #fafcff;
 }

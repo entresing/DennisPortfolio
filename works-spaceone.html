@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dennis Deng's Portfolio | Selected Work | Spaceone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/works.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/variable-proximity.css" />
+    <link rel="stylesheet" href="css/game.css" />
+
+    <script src="js/header.js" defer></script>
+    <script src="js/disclosure.js" defer></script>
+  </head>
+
+  <body class="game-theme">
+    <header role="banner">
+      <div class="heading">
+        <nav class="header-container nav-flex" role="navigation">
+          <div class="cloud-button">
+            <ul class="button-flex">
+              <li>
+                <a class="navs nav-home" href="game.html">
+                  <span></span><span></span><span></span><span></span>
+                  HOME
+                </a>
+              </li>
+
+              <li>
+                <a class="navs nav-about" href="about-game.html">
+                  <span></span><span></span><span></span><span></span>
+                  ABOUT
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="home-container selected-work-one">
+      <div class="work-grid-container">
+        <div class="work-one-heading">
+          <h1>
+            <span
+              class="variable-proximity vp-lock-line project-title"
+              data-vp
+              data-from="'wght' 600"
+              data-to="'wght' 900"
+              data-radius="150"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >SPACEONE</span
+            >
+            <span
+              class="variable-proximity vp-lock-line context context-light"
+              data-vp
+              data-from="'wght' 100"
+              data-to="'wght' 550"
+              data-radius="90"
+              data-falloff="linear"
+              data-container=".work-one-heading"
+              >A 2D Space Shooter</span
+            >
+          </h1>
+          <p>
+            <span>Overview:</span> Spaceone is a 2D space shooter mini game
+            where the player controls a spaceship, dodges enemy movement, fires
+            projectiles, destroys waves of debris, and survives a final alien
+            ship boss attack. Built in Processing with Java, it was my first
+            complete game project that I coded entirely by myself.
+          </p>
+
+          <p>
+            Before Spaceone, my game work was mostly focused on art direction,
+            visual effects, and asset creation. This project became the point
+            where I began translating those visual instincts into code. Instead
+            of using PNG sprites or premade art assets, I used simple geometry,
+            motion, collision feedback, timers, and object-oriented programming
+            to create a playable arcade experience with clear visual impact.
+          </p>
+
+          <p>
+            This is a compact project rather than a large production game, but
+            it is a meaningful one. It marks my transition from being primarily
+            an artist into someone who could build interactive systems, game
+            feel, and procedural visual effects through code alone.
+          </p>
+        </div>
+
+        <div class="project-website">
+          <a
+            class="button-secondary btn-primary"
+            href="https://github.com/entresing/Spaceone_2Dshooter"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GITHUB LINK</a
+          >
+          <a
+            class="button-secondary btn-primary"
+            href="https://spaceone-2-dshooter-dpwe.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >PLAY SPACEONE</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="preview">
+      <div class="showcase">
+        <div class="live-web home-container work-image figure-one">
+          <figure class="work-showcase">
+            <div class="game-frame-wrapper">
+              <iframe
+                src="https://spaceone-2-dshooter-dpwe.vercel.app/"
+                title="Playable Spaceone p5.js game"
+                class="game-frame"
+                loading="lazy"
+                allow="fullscreen"
+              ></iframe>
+            </div>
+            <figcaption>
+              Playable p5.js web build of Spaceone, recreating the original
+              Processing / Java project so visitors can experience the movement,
+              projectile trails, collision feedback, screen shake, debris
+              explosions, injured-state feedback, and boss encounter directly in
+              the browser.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="home-container preview-details">
+          <div class="project-section-label">Playable Preview</div>
+          <h2>Play Spaceone in Browser</h2>
+          <div class="project-content">
+            <p>
+              This browser-playable version recreates my original Processing /
+              Java project as a p5.js web build for portfolio viewing. Visitors
+              can experience the core game feel directly in the browser,
+              including mouse aiming, projectile trails, collision feedback,
+              screen shake, debris explosions, injured-state feedback, and the
+              final boss encounter.
+            </p>
+
+            <div class="game-controls">
+              <span>Move: WASD / Arrow Keys</span>
+              <span>Aim: Mouse</span>
+              <span>Start / Restart: Enter</span>
+            </div>
+
+            <p class="game-note">
+              Best experienced on desktop. Click inside the game window before
+              using keyboard controls.
+            </p>
+
+            <!-- <div class="project-button-group">
+              <a
+                class="button-secondary button-secondary-light"
+                href="https://spaceone-2-dshooter-dpwe.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PLAY SPACEONE IN BROWSER
+                <span class="material-symbols-rounded arrow-icon"
+                  >open_in_new</span
+                >
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-container project-detail">
+      <div class="detail-role">
+        <h2>My Role:</h2>
+        <p>Solo Developer, Gameplay Programmer, Visual Effects Designer</p>
+      </div>
+
+      <div class="detail-time-spent">
+        <h2>Year:</h2>
+        <p>2021</p>
+      </div>
+
+      <div class="detail-team">
+        <h2>Project Type:</h2>
+        <p>Solo 2D mini game</p>
+      </div>
+
+      <div class="detail-tools">
+        <h2>Tools:</h2>
+        <ul>
+          <li>
+            Processing · Java · OOP · PVector · Procedural Shape Animation
+          </li>
+        </ul>
+      </div>
+
+      <div class="detail-tools">
+        <h2>Focus:</h2>
+        <ul>
+          <li>
+            Game feel · Procedural VFX · Motion feedback · Collision systems
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="home-container selected-work-one" id="after-showcase">
+      <div class="content-container project-challenge">
+        <h2>THE DESIGN CHALLENGE</h2>
+        <div class="project-content">
+          <p>
+            The main challenge was creating a game that felt fun and visually
+            satisfying without relying on illustrated sprites, textures, or
+            external art assets. Because the game was built almost entirely from
+            basic shapes, every feeling of impact had to come from motion and
+            feedback.
+          </p>
+
+          <p>
+            How projectiles travelled, how enemies reacted when hit, how objects
+            exploded, how the player shook when damaged, and how the boss
+            visually stood apart from smaller enemies all had to be solved
+            through code. The goal was not to make the most complex shooter, but
+            to make a simple game feel alive through timing, motion, and
+            interaction.
+          </p>
+
+          <p>
+            This was also a personal challenge. Coming from an art and VFX
+            background, I had to translate visual instincts into programming
+            logic: vectors, collision checks, timers, arrays, and object
+            classes. Spaceone was where that translation first clicked.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container project-result">
+        <h2>VISUAL SYSTEM</h2>
+        <div class="project-content">
+          <p>
+            Spaceone uses a minimal geometric visual language. The player is
+            represented with circular forms and a directional cannon, while
+            enemies are represented with rotating square forms. This contrast
+            created an immediate visual distinction between the player and
+            hostile objects.
+          </p>
+
+          <p>
+            The boss was designed to feel heavier and more intimidating through
+            larger layered square shapes, stronger color contrast, and a more
+            dominant screen presence. Even without detailed character art, the
+            boss needed to communicate danger through scale, rhythm, and
+            projectile behavior.
+          </p>
+
+          <p><span>The visual system was built from:</span></p>
+          <ul>
+            <li>Ellipses for the player body</li>
+            <li>Rectangles and squares for enemies, bullets, and debris</li>
+            <li>Rotating shapes for motion energy</li>
+            <li>Fading opacity timers for explosions</li>
+            <li>Color shifts for damage and invincibility states</li>
+            <li>Screen overlays for warning and game-state feedback</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-container selected-work-one" id="after-showcase">
+      <div class="work-image figure-three">
+        <figure>
+          <video
+            width="1500"
+            height="1125"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            aria-label="A looping preview of Spaceone's projectile tails and debris explosions generated from simple geometry"
+          >
+            <source
+              src="img/spaceone/walkthrough-spaceone.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>
+            Projectile tails, screen shake, and debris explosions were all
+            generated through code, giving simple shapes a strong sense of
+            impact and speed.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="content-container project-challenge">
+        <h2>01 - MOTION AND GAME FEEL</h2>
+        <div class="project-content">
+          <p>
+            A major focus of Spaceone was using motion to make interactions feel
+            impactful. Projectiles are not just static bullets. They leave short
+            geometric tails behind them, built from repeated shape positions,
+            creating a sense of speed and direction.
+          </p>
+
+          <p>
+            When a projectile hits an enemy, it triggers a debris effect where
+            smaller square fragments spread outward, rotate, slow down, and fade
+            over time. Damage feedback was also designed through motion: when
+            the player is hit, the ship briefly shakes and flashes red, making
+            the injured state immediately readable. Enemies also shake when
+            damaged, giving each hit a stronger physical response.
+          </p>
+
+          <p>
+            These small feedback systems made the game feel more responsive and
+            satisfying, even though the visuals were created only from simple
+            shapes. Game feel, I learned, comes from the relationship between
+            input, response, timing, and motion, not from art quality alone.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container project-challenge">
+        <h2>02 - GAMEPLAY SYSTEMS</h2>
+        <div class="project-content">
+          <p>
+            <span>Player control:</span> The player moves using keyboard input
+            and aims toward the mouse position. Movement is driven through
+            acceleration and damping, giving the ship a smoother arcade-like
+            feel instead of instant stop-and-go movement.
+          </p>
+
+          <p>
+            <span>Projectile system:</span> The player fires projectiles toward
+            the mouse cursor. Each projectile stores its position, angle, speed,
+            rotation, tail history, collision state, and destruction timer.
+          </p>
+
+          <p>
+            <span>Enemy system:</span> Enemies spawn with randomized positions,
+            health values, movement directions, and rotation speeds. They bounce
+            off each other and react to player collisions.
+          </p>
+
+          <p>
+            <span>Health and score:</span> The player has limited health, and
+            score increases when enemies are hit. Difficulty rises as the score
+            grows, gradually increasing enemy speed.
+          </p>
+
+          <p>
+            <span>Boss phase:</span> After the enemy wave is cleared, the game
+            enters a warning phase before spawning the boss. The boss uses a
+            larger body, a stronger presence, and multiple projectile behaviors,
+            including fast direct shots and slower spreading attacks.
+          </p>
+
+          <p>
+            <span>Game states:</span> The project includes a main menu, level
+            gameplay, boss battle, win state, loss state, pause, and restart.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container project-challenge">
+        <h2>03 - TECHNICAL IMPLEMENTATION</h2>
+        <div class="project-content">
+          <p>
+            Spaceone was structured using object-oriented programming. Instead
+            of writing every behavior in one place, I separated the game into
+            classes such as Player, Enemy, BossEnemy, Projectile,
+            BossProjectile, Debris, Score, and Crosshair.
+          </p>
+
+          <p>
+            This helped me understand how objects can manage their own movement,
+            collision, drawing, health, animation timers, and visual effects. It
+            was one of my first practical experiences with OOP, and it built a
+            stronger foundation for my later Unity and C# game development.
+          </p>
+
+          <p>
+            A key part of the implementation was using timers to control visual
+            feedback. Damage flashing, invincibility, projectile destruction,
+            debris fading, death animations, and boss warning effects all rely
+            on countdown-based logic. This let me create layered visual effects
+            without an animation timeline or external assets.
+          </p>
+
+          <p><span>Core classes:</span></p>
+          <ul>
+            <li>
+              Player &ndash; movement, aiming, health, and injured feedback
+            </li>
+            <li>
+              Enemy &amp; BossEnemy &ndash; spawning, motion, and collision
+            </li>
+            <li>
+              Projectile &amp; BossProjectile &ndash; firing, tails, and
+              patterns
+            </li>
+            <li>Debris &ndash; fragment explosions with fading timers</li>
+            <li>
+              Score &amp; Crosshair &ndash; scoring and mouse-aimed targeting
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-container selected-work-one" id="after-showcase">
+      <div class="content-container project-result">
+        <h2>WHAT I LEARNED</h2>
+        <div class="project-content">
+          <p>
+            Spaceone taught me how to think like both a designer and a
+            programmer. As a visual designer, I focused on readability,
+            contrast, impact, and rhythm. As a programmer, I had to translate
+            those ideas into systems: vectors, collision checks, timers, arrays,
+            object classes, and state management.
+          </p>
+
+          <p>
+            This project helped me understand that game feel is not only about
+            art quality. It comes from the relationship between input, response,
+            timing, motion, and feedback. Even simple shapes can feel exciting
+            when the interaction is clear and the feedback is strong.
+          </p>
+
+          <p>
+            Spaceone became an important foundation for my later work in
+            technical art and gameplay development, especially in areas like
+            VFX, procedural animation, collision feedback, and player-facing
+            interaction systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-container selected-work-one">
+      <div class="project-thought">
+        <h2>OUTCOME</h2>
+        <div class="project-content2">
+          <p>
+            Although Spaceone is a small project, it represents an important
+            step in my growth as a game developer. It was my first fully
+            self-coded game, my first deeper experience with Java and
+            object-oriented programming, and one of the first times I created a
+            complete gameplay experience through code alone.
+          </p>
+
+          <p>
+            The project demonstrates my ability to create visual impact without
+            relying on premade assets, build interactive systems from scratch,
+            and use motion design to make a simple 2D shooter feel fun,
+            responsive, and satisfying.
+          </p>
+
+          <p>
+            More than the game itself, Spaceone marks the moment my art and VFX
+            instincts started becoming code. That transition is the foundation
+            everything in my technical art and gameplay work has been built on
+            since.
+          </p>
+        </div>
+      </div>
+
+      <div class="work-selection-container">
+        <div class="work-selection-before">
+          <a class="button-secondary" href="works-gemini.html">
+            <span class="material-symbols-rounded arrow-icon arrow-left"
+              >arrow_back</span
+            >
+            Gemini
+          </a>
+        </div>
+
+        <div class="work-selection-next">
+          <a class="button-secondary" href="game.html">
+            Back to Game Portfolio
+            <span class="material-symbols-rounded arrow-icon"
+              >arrow_forward</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#work-section">Selected Works</a></li>
+            <li><a href="about-game.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:wxd@sfu.com">wxd@sfu.ca</a></li>
+            <li><a href="tel:+16047617624">+1(604)-761-7624</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h3>Follow Me</h3>
+          <div class="follow-me">
+            <a
+              href="https://github.sfu.ca/wxd?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="img/github.png"
+                width="638"
+                height="638"
+                alt="A GitHub icon that will lead the user to my GitHub page"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dennis-deng-a18a14203/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="img/linkdin.png"
+                width="638"
+                height="638"
+                alt="A LinkedIn icon that will lead the user to my Linkdin page"
+              />
+            </a>
+            <a
+              href="https://twitter.com/NewBlashed"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="img/twitter.png"
+                width="638"
+                height="638"
+                alt="A Twitter icon that will lead the user to my Twitter page"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; [2026] Website Designed and Developed by [Dennis Deng]. All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/variable-proximity.js" defer></script>
+  </body>
+</html>
