@@ -1,0 +1,450 @@
+/* Enterprise UX Co-op case-study hub
+   Reuses the shared works layout (works.css), the cloud-effect project
+   cards from main.css, and the responsive .grid.two-columns from grid.css.
+   This file only adds the page-specific placeholders, captions, the hidden
+   showcase container, and the additional-experience chips. */
+
+/* MAJOR WORK AREAS -------------------------------------------------------- */
+
+/* Tighten the intro-to-cards gap. The shared .selected-work-one adds a
+   10em bottom margin (meant to separate long-form case-study blocks); on
+   this hub the hero sits directly above the card grid, so a smaller,
+   consistent gap reads better. */
+.enterprise-hero {
+  margin-bottom: 3rem;
+}
+
+.enterprise-section {
+  position: relative;
+}
+
+.enterprise-cards {
+  align-items: start;
+  padding-bottom: 2rem;
+}
+
+/* The showcase is hidden by default, so the additional-experience block
+   follows the cards directly. Keep its top margin in line with the rest
+   of the page instead of the large default case-study spacing. */
+.additional-experience {
+  margin-top: 4rem;
+}
+
+/* The shared .content-container is a side-by-side flex row; on this section
+   we want the chips to stack directly under the project copy instead. */
+.additional-experience .content-container {
+  flex-direction: column;
+  gap: 0;
+}
+
+.enterprise-work-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Placeholder visual area for each card. Reuses the square .image-wrapper
+   ratio but renders a generalized gradient + icon instead of a real
+   internal screenshot (confidential work). */
+.card-placeholder {
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #dbe7f7 0%, #b9cdec 100%);
+}
+
+.placeholder-analytics {
+  background: linear-gradient(135deg, #dbe7f7 0%, #a9c4ea 100%);
+}
+
+.placeholder-audit {
+  background: linear-gradient(135deg, #e2ecf9 0%, #b4c9e6 100%);
+}
+
+.placeholder-ai {
+  background: linear-gradient(135deg, #e6e1f7 0%, #b7c1ec 100%);
+}
+
+.placeholder-motion {
+  background: linear-gradient(135deg, #dcecf1 0%, #aecfe4 100%);
+  background-image: url("../img/enterprise/spatial-computing-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* A real image already communicates this card, so hide the generic icon. */
+.placeholder-motion .card-icon {
+  display: none;
+}
+
+.card-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 4rem;
+  color: #4d6b93;
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+
+/* On hover the cloud circles rise and the title fades in (inherited from
+   .image-title in main.css); fade the icon so the title reads cleanly. */
+.cloud-effect ul li:hover .card-icon,
+.cloud-effect ul li a:focus-within .card-icon {
+  opacity: 0;
+}
+
+.card-overlay-title {
+  padding: 0 1rem;
+  font-size: 1.25rem;
+}
+
+/* Always-visible caption below the card. */
+.enterprise-card-caption {
+  padding: 1rem 0.25rem 0;
+}
+
+.enterprise-card-caption .card-title {
+  margin-bottom: 0.35rem;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+}
+
+.enterprise-card-caption .card-category {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #4d6b93;
+}
+
+.enterprise-card-caption .card-desc {
+  max-width: 52ch;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* HIDDEN SHOWCASE / DETAIL SECTION --------------------------------------- */
+
+/* Hidden by default via the [hidden] attribute in markup. Future JS should
+   remove the attribute (or toggle .is-open) to reveal the selected project. */
+.project-showcase-section[hidden] {
+  display: none;
+}
+
+.project-showcase-section {
+  background-color: #fafcff;
+  padding: 3rem 0;
+}
+
+.project-showcase-section.is-additional-mode {
+  padding: 0;
+}
+
+.project-showcase-section.is-additional-mode .showcase-body {
+  display: none;
+}
+
+.showcase-project-title {
+  font-size: 2rem;
+  color: #1a1a1a;
+}
+
+.showcase-project-category {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #4d6b93;
+}
+
+.showcase-project-overview,
+.showcase-project-media,
+.showcase-project-process {
+  margin-bottom: 2rem;
+}
+
+/* Reveal animation the first time the showcase opens (subtle fade + rise). */
+.project-showcase-section.is-revealing {
+  animation: showcaseReveal 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes showcaseReveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sticky mini project switcher. Sits just below the fixed site header
+   (offset supplied by JS via --header-h) and stays in view while the user
+   scrolls through long project content. */
+.showcase-tabs-wrap {
+  position: sticky;
+  top: var(--header-h, 4.5rem);
+  z-index: 1;
+  width: fit-content;
+  max-width: calc(100% - 1rem);
+  margin: 0 0 2rem;
+  margin-left: max(3rem, calc((100% - 75rem) / 2 + 3rem));
+  background-color: #fafcff;
+  border: 1px solid #dee0e2;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+.showcase-tabs-wrap .home-container {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.showcase-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.showcase-tab {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  color: #1a1a1a;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding: 1rem 2rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  width: fit-content;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.showcase-tab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 0.15rem dotted rgba(26, 26, 26, 0.45);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.showcase-tab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 0.15rem solid #1a1a1a;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.showcase-tab:hover,
+.showcase-tab:focus {
+  color: #1a1a1a;
+  background-color: transparent;
+}
+
+.showcase-tab:hover::after,
+.showcase-tab:focus::after {
+  opacity: 0;
+}
+
+.showcase-tab:hover::before,
+.showcase-tab:focus::before {
+  opacity: 1;
+}
+
+.showcase-tab:focus-visible {
+  outline: none;
+}
+
+.showcase-tab[aria-selected="true"],
+.showcase-tab[aria-selected="true"]:hover,
+.showcase-tab[aria-selected="true"]:focus,
+.showcase-tab[aria-selected="true"]:focus-visible {
+  background-color: #1a1a1a;
+  color: #fafcff;
+}
+
+.showcase-tab[aria-selected="true"]::after,
+.showcase-tab[aria-selected="true"]::before {
+  opacity: 0;
+}
+
+.showcase-tab[aria-selected="true"]:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+/* Keep keyboard focus visible while retaining the button-secondary look. */
+.showcase-tab:not([aria-selected="true"]):focus-visible::before {
+  opacity: 1;
+}
+
+/* Neutralize the old tab-specific transitions to avoid conflicting animation stacks. */
+.showcase-tab {
+  transition:
+    color 0.3s ease,
+    background-color 0.25s ease;
+}
+
+.showcase-tab:hover {
+  background-color: transparent;
+}
+
+.showcase-tab[aria-selected="true"] {
+  background-color: #1a1a1a;
+  color: #fafcff;
+}
+
+/* Content crossfade when switching projects. */
+.showcase-body {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.showcase-body.is-fading {
+  opacity: 0;
+  transform: translateY(0.5rem);
+}
+
+/* Active-card indicator, synced with the selected tab. */
+.enterprise-work-item.is-active .cloud-effect ul li {
+  outline: 2px solid #4d6b93;
+  outline-offset: 3px;
+}
+
+/* Generalized, confidentiality-safe media placeholder. */
+.showcase-media-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+  min-height: 16rem;
+  padding: 2rem;
+  border: 1px dashed #c4d5ec;
+  border-radius: 1rem;
+  /* background: linear-gradient(135deg, #eef4fc 0%, #dbe7f7 100%); */
+  color: #4d6b93;
+}
+
+.showcase-media-frame .material-symbols-rounded {
+  font-size: 3rem;
+}
+
+.showcase-media-frame p {
+  max-width: 40ch;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Grid of labeled placeholder frames (e.g., device research, storyboards).
+   Sanitized mockups can drop straight into these frames later. */
+.showcase-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.showcase-media-grid .showcase-media-frame {
+  margin: 0;
+}
+
+.showcase-media-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #33517a;
+}
+
+/* Process / research details. */
+.showcase-project-process h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.showcase-project-process h3:not(:first-child) {
+  margin-top: 1.75rem;
+}
+
+.showcase-project-process p {
+  max-width: 60ch;
+  margin: 0 0 0.75rem;
+}
+
+.showcase-project-process ul {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.showcase-project-process li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #c4d5ec;
+  border-radius: 999px;
+  background-color: #eef4fc;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #33517a;
+}
+
+/* ADDITIONAL EXPERIENCE --------------------------------------------------- */
+
+.experience-chips {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.experience-chips li {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #c4d5ec;
+  border-radius: 999px;
+  background-color: #eef4fc;
+  /* Smaller than body copy (1rem) for visual hierarchy, but kept at
+     0.8125rem (13px) with a 4.5:1+ contrast (#33517a on #eef4fc) so it
+     stays comfortably readable per WCAG AA. */
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #33517a;
+}
+
+@media only screen and (max-width: 37.5rem) {
+  .showcase-tabs-wrap {
+    margin-left: 1rem;
+  }
+
+  .card-icon {
+    font-size: 3rem;
+  }
+
+  .enterprise-card-caption .card-title {
+    font-size: 1.1rem;
+  }
+}
